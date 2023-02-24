@@ -5,13 +5,14 @@ function Header() {
     return (
         <>
             <Carousel
+                swipe={true}
                 height={600}
                 sx={{
                     width: "100%",
                 }}
             >
                 <img
-                    src="images/Artboard-1-15.png"
+                    src="images/Artboard-3.jpg"
                     alt=""
                     style={{
                         height: 600,
@@ -20,7 +21,16 @@ function Header() {
                     }}
                 />
                 <img
-                    src="images/Artboard-1-1-1.png"
+                    src="images/Artboard-1.jpg"
+                    alt=""
+                    style={{
+                        height: 600,
+                        width: "100%",
+                        objectFit: "fill",
+                    }}
+                />
+                <img
+                    src="images/Artboard-2.jpg"
                     alt=""
                     style={{
                         height: 600,

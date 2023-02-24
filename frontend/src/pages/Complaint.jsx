@@ -6,10 +6,7 @@ import { Container } from "@mui/system";
 function Complaint() {
     return (
         <Box>
-            <Header1
-                title="للحجز والإستفسار"
-                desc="ارسل طلب حجز رحلة سياحية أو استفسار"
-            />
+            <Header1 title="الشكاوى" desc="نعتذر في حالة حدوث مشكلة" />
             <Container
                 sx={{
                     mt: 5,

@@ -30,6 +30,7 @@ export default function NavDrawer({ setDrawer, drawer }) {
                                 fontSize: 15,
                                 fontWeight: "bold",
                             }}
+                            onClick={() => setDrawer(false)}
                         >
                             الصفحة الرئيسية
                         </Link>
@@ -41,6 +42,7 @@ export default function NavDrawer({ setDrawer, drawer }) {
                                 fontSize: 15,
                                 fontWeight: "bold",
                             }}
+                            onClick={() => setDrawer(false)}
                         >
                             حجز برامج سياحية
                         </Link>
@@ -52,6 +54,7 @@ export default function NavDrawer({ setDrawer, drawer }) {
                                 fontSize: 15,
                                 fontWeight: "bold",
                             }}
+                            onClick={() => setDrawer(false)}
                         >
                             من نحن
                         </Link>
@@ -63,6 +66,7 @@ export default function NavDrawer({ setDrawer, drawer }) {
                                 fontSize: 15,
                                 fontWeight: "bold",
                             }}
+                            onClick={() => setDrawer(false)}
                         >
                             ارسال شكوى
                         </Link>
@@ -74,6 +78,7 @@ export default function NavDrawer({ setDrawer, drawer }) {
                                 fontSize: 15,
                                 fontWeight: "bold",
                             }}
+                            onClick={() => setDrawer(false)}
                         >
                             طلبات الشركات
                         </Link>
@@ -85,6 +90,7 @@ export default function NavDrawer({ setDrawer, drawer }) {
                                 fontSize: 15,
                                 fontWeight: "bold",
                             }}
+                            onClick={() => setDrawer(false)}
                         >
                             توظيف
                         </Link>
