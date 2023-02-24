@@ -11,7 +11,6 @@ import ToursDetiles from "./pages/ToursDetiles";
 import Footer from "./components/Footer";
 
 function App() {
-    const mo = "";
     return (
         <div className="App" dir="rtl">
             <CssBaseline />
