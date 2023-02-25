@@ -1,0 +1,24 @@
+{
+  "name": "rihltk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "homepage": "http://moh2medkhaled.github.io/rihltk",
+  "scripts": {
+    "predeploy": "npm run build ./frontend",
+    "deploy": "gh-pages -d build ./frontend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moh2medkhaled/rihltk.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moh2medkhaled/rihltk/issues"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
+  }
+}
