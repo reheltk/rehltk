@@ -4,13 +4,20 @@ import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "@mui/material";
 import theme from "./util/theme";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
+
+const queryClient = new QueryClient();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <React.StrictMode>
         <BrowserRouter>
             <ThemeProvider theme={theme}>
-                <App />
+                <QueryClientProvider client={queryClient}>
+                    <App />
+                    <ReactQueryDevtools />
+                </QueryClientProvider>
             </ThemeProvider>
         </BrowserRouter>
     </React.StrictMode>

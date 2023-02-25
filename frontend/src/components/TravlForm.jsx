@@ -13,7 +13,7 @@ import {
     Typography,
 } from "@mui/material";
 
-import axios from "axios";
+import axios from "../util/axios";
 const countrys = [
     "جورجيا ",
     "البوسنة ",
@@ -62,14 +62,12 @@ function TravlForm() {
                 bookingFlight,
                 date: Date.now(),
             };
-            const res = await axios.post(
-                "http://localhost:8000/addOrder",
-                data
-            );
+            const res = await axios.post("/addOrder", data);
             if (res.status === 200) setOk(true);
         } catch (error) {
             setOk(false);
         }
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     };
     return (
         <Box>

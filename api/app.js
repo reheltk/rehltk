@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
-require("dotenv").config();
 const app = express();
+require("dotenv").config();
 
 const {
     addOrder,
@@ -67,18 +67,15 @@ app.post("/addEmployee", async (req, res) => {
 app.get("/tours", async (req, res) => {
     try {
         const rows = await getToursList(req.body);
-        let data = [];
+        let tours = [];
         for (let row of rows) {
-            data.push({
+            tours.push({
                 title: row.title,
                 imageUrl: row.imageUrl,
             });
         }
 
-        res.json({
-            ok: "ok",
-            data,
-        });
+        res.json(tours);
     } catch (error) {
         console.log(error);
     }

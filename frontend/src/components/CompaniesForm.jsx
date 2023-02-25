@@ -7,7 +7,7 @@ import {
     Typography,
     Alert,
 } from "@mui/material";
-import axios from "axios";
+import axios from "../util/axios";
 
 const citys = [
     "الرياض",
@@ -44,14 +44,12 @@ function CompaniesForm() {
                 desc,
                 date: Date.now(),
             };
-            const res = await axios.post(
-                "http://localhost:8000/addCoumpanyOrder",
-                data
-            );
+            const res = await axios.post("/addCoumpanyOrder", data);
             if (res.status === 200) setOk(true);
         } catch (error) {
             setOk(false);
         }
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     };
     return (
         <Box>
