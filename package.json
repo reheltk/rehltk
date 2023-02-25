@@ -5,8 +5,8 @@
   "main": "index.js",
   "homepage": "http://moh2medkhaled.github.io/rihltk",
   "scripts": {
-    "predeploy": "npm run build ./frontend",
-    "deploy": "gh-pages -d build ./frontend"
+    "predeploy": "npm run build --prefix ./frontend",
+    "deploy": "gh-pages -d build --prefix ./frontend"
   },
   "repository": {
     "type": "git",
