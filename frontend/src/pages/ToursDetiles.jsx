@@ -1,13 +1,20 @@
 import { Typography } from "@mui/material";
 import { Box, Container } from "@mui/system";
 import React from "react";
+import { useLocation } from "react-router-dom";
 import TravlForm from "../components/TravlForm";
 
 function ToursDetiles() {
+    const { state } = useLocation();
+    const { tour } = state;
+    console.log(tour);
     return (
         <Box>
             <img
-                src="/images/Artboard-1-1-1.png"
+                // src={tour?.imageUrl}
+                src={`https://drive.google.com/uc?export=view&id=${
+                    tour?.imageUrl.split("/")[5]
+                }`}
                 alt=""
                 style={{
                     height: 600,
@@ -27,8 +34,8 @@ function ToursDetiles() {
                         mb: 5,
                     }}
                 >
-                    استمتع برحلة 10 أيام في تايلاند وزيارة جميع المعالم السياحية
-                    في تايلاند والأنشطة السياحية .
+                    استمتع برحلة 10 أيام في {tour?.title} وزيارة جميع المعالم
+                    السياحية في {tour?.title} والأنشطة السياحية.
                 </Typography>
 
                 <TravlForm />

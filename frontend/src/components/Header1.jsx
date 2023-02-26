@@ -1,14 +1,15 @@
 import React from "react";
-import { Typography } from "@mui/material";
+import { Box, Typography, useTheme } from "@mui/material";
 
 function Header1({ title, desc }) {
+    const theme = useTheme();
+    console.log(theme);
     return (
-        <div
+        <Box
+            bgcolor={theme.palette.secondary.main}
             height={200}
             style={{
                 width: "100%",
-
-                backgroundColor: "#F59D31",
                 padding: 50,
                 textAlign: "center",
                 color: "white",
@@ -18,7 +19,7 @@ function Header1({ title, desc }) {
                 {title}
             </Typography>
             <Typography> {desc}</Typography>
-        </div>
+        </Box>
     );
 }
 

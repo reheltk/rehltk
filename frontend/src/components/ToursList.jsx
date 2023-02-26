@@ -1,4 +1,4 @@
-import { Grid } from "@mui/material";
+import { Grid, Skeleton } from "@mui/material";
 import React from "react";
 import TorsCard from "./TorsCard";
 import { useQuery } from "react-query";
@@ -10,14 +10,20 @@ const getTours = async () => {
 };
 
 function ToursList() {
-    const { data } = useQuery("tours", getTours);
+    const { data, isLoading } = useQuery("tours", getTours);
 
     return (
         <>
             <Grid container spacing={2}>
+                {isLoading &&
+                    [...Array(6)].map((_, i) => (
+                        <Grid item xs={12} md={4} key={i}>
+                            <Skeleton variant="rectangular" height={250} />
+                        </Grid>
+                    ))}
                 {data &&
-                    data.map((tour) => (
-                        <Grid item xs={12} md={4}>
+                    data.map((tour, i) => (
+                        <Grid item xs={12} md={4} key={i}>
                             <TorsCard tour={tour} />
                         </Grid>
                     ))}
