@@ -7,17 +7,17 @@ import TravlForm from "../components/TravlForm";
 function ToursDetiles() {
     const { state } = useLocation();
     const { tour } = state;
-    console.log(tour);
+
     return (
         <Box>
-            <img
-                // src={tour?.imageUrl}
+            <Box
+                component="img"
                 src={`https://drive.google.com/uc?export=view&id=${
                     tour?.imageUrl.split("/")[5]
                 }`}
                 alt=""
-                style={{
-                    height: 600,
+                sx={{
+                    height: { xs: 250, md: 550 },
                     width: "100%",
                     objectFit: "fill",
                 }}
@@ -32,6 +32,7 @@ function ToursDetiles() {
                     variant="h3"
                     sx={{
                         mb: 5,
+                        typography: { xs: "h5", md: "h3" },
                     }}
                 >
                     استمتع برحلة 10 أيام في {tour?.title} وزيارة جميع المعالم

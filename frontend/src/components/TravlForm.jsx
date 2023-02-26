@@ -77,8 +77,8 @@ function TravlForm() {
                 component="h3"
                 sx={{
                     mb: 5,
-                    fontWeight: "bold",
                     maxWidth: 600,
+                    fontWeight: "bold",
                 }}
             >
                 للطلب والاستفسار، يرجى تزويدنا ببياناتك وسنقوم بالتواصل معك في
