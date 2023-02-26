@@ -6,6 +6,7 @@ import {
     TextField,
     Typography,
     Alert,
+    FormControl,
 } from "@mui/material";
 import axios from "../util/axios";
 
@@ -46,6 +47,7 @@ function CompaniesForm() {
             };
             const res = await axios.post("/addCoumpanyOrder", data);
             if (res.status === 200) setOk(true);
+            e.target.reset();
         } catch (error) {
             setOk(false);
         }
@@ -161,23 +163,25 @@ function CompaniesForm() {
                 >
                     المدينة:
                 </Typography>
-                <TextField
-                    fullWidth
-                    select
-                    defaultValue={"---"}
-                    onChange={(e) => setCity(e.target.value)}
-                    required
-                    sx={{
-                        mb: 1,
-                        backgroundColor: "#EEEEEE",
-                    }}
-                >
-                    {citys.map((city) => (
-                        <MenuItem key={city} value={city}>
-                            {city}
-                        </MenuItem>
-                    ))}
-                </TextField>
+                <FormControl required fullWidth>
+                    <TextField
+                        fullWidth
+                        select
+                        onChange={(e) => setCity(e.target.value)}
+                        required
+                        sx={{
+                            mb: 1,
+                            backgroundColor: "#EEEEEE",
+                        }}
+                    >
+                        {citys.map((city) => (
+                            <MenuItem key={city} value={city}>
+                                {city}
+                            </MenuItem>
+                        ))}
+                    </TextField>
+                </FormControl>
+
                 <Typography
                     variant="h6"
                     component="h3"

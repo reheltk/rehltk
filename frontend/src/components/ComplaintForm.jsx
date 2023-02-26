@@ -27,6 +27,7 @@ function ComplaintForm() {
             };
             const res = await axios.post("/addComplaint", data);
             if (res.status === 200) setOk(true);
+            e.target.reset();
         } catch (error) {
             setOk(false);
         }

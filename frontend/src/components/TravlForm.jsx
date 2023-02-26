@@ -64,6 +64,7 @@ function TravlForm() {
             };
             const res = await axios.post("/addOrder", data);
             if (res.status === 200) setOk(true);
+            e.target.reset();
         } catch (error) {
             setOk(false);
         }
@@ -122,24 +123,26 @@ function TravlForm() {
                 >
                     مدينتك:
                 </Typography>
-                <TextField
-                    fullWidth
-                    select
-                    name="city"
-                    defaultValue={"--"}
-                    required
-                    onChange={(e) => setCity(e.target.value)}
-                    sx={{
-                        mb: 1,
-                        backgroundColor: "#EEEEEE",
-                    }}
-                >
-                    {citys.map((city) => (
-                        <MenuItem key={city} value={city}>
-                            {city}
-                        </MenuItem>
-                    ))}
-                </TextField>
+                <FormControl required fullWidth>
+                    <TextField
+                        fullWidth
+                        select
+                        name="city"
+                        required
+                        onChange={(e) => setCity(e.target.value)}
+                        sx={{
+                            mb: 1,
+                            backgroundColor: "#EEEEEE",
+                        }}
+                    >
+                        {citys.map((city) => (
+                            <MenuItem key={city} value={city}>
+                                {city}
+                            </MenuItem>
+                        ))}
+                    </TextField>
+                </FormControl>
+
                 <Typography
                     variant="h6"
                     component="h3"
@@ -150,24 +153,26 @@ function TravlForm() {
                 >
                     وين حاب تسافر:
                 </Typography>
-                <TextField
-                    fullWidth
-                    select
-                    defaultValue="--"
-                    required
-                    name="country"
-                    onChange={(e) => setCountry(e.target.value)}
-                    sx={{
-                        mb: 1,
-                        backgroundColor: "#EEEEEE",
-                    }}
-                >
-                    {countrys.map((country) => (
-                        <MenuItem key={country} value={country}>
-                            {country}
-                        </MenuItem>
-                    ))}
-                </TextField>
+                <FormControl required fullWidth>
+                    <TextField
+                        fullWidth
+                        select
+                        required
+                        name="country"
+                        onChange={(e) => setCountry(e.target.value)}
+                        sx={{
+                            mb: 1,
+                            backgroundColor: "#EEEEEE",
+                        }}
+                    >
+                        {countrys.map((country) => (
+                            <MenuItem key={country} value={country}>
+                                {country}
+                            </MenuItem>
+                        ))}
+                    </TextField>
+                </FormControl>
+
                 <Typography
                     variant="h6"
                     component="h3"
@@ -183,7 +188,7 @@ function TravlForm() {
                     required
                     onChange={(e) => setBookingFlight(e.target.value)}
                 >
-                    <RadioGroup row name="bookingFlight" re>
+                    <RadioGroup row name="bookingFlight">
                         <FormControlLabel
                             value="نعم"
                             control={<Radio color="secondary" />}

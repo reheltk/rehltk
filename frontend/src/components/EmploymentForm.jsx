@@ -49,6 +49,7 @@ function EmploymentForm() {
             };
             const res = await axios.post("/addEmployee", data);
             if (res.status === 200) setOk(true);
+            e.target.reset();
         } catch (error) {
             setOk(false);
         }
@@ -145,23 +146,24 @@ function EmploymentForm() {
                 >
                     مدينتك:
                 </Typography>
-                <TextField
-                    fullWidth
-                    select
-                    onChange={(e) => setCity(e.target.value)}
-                    required
-                    defaultValue={"الرياض"}
-                    sx={{
-                        mb: 1,
-                        backgroundColor: "#EEEEEE",
-                    }}
-                >
-                    {citys.map((city) => (
-                        <MenuItem key={city} value={city}>
-                            {city}
-                        </MenuItem>
-                    ))}
-                </TextField>
+                <FormControl required fullWidth>
+                    <TextField
+                        fullWidth
+                        select
+                        onChange={(e) => setCity(e.target.value)}
+                        required
+                        sx={{
+                            mb: 1,
+                            backgroundColor: "#EEEEEE",
+                        }}
+                    >
+                        {citys.map((city) => (
+                            <MenuItem key={city} value={city}>
+                                {city}
+                            </MenuItem>
+                        ))}
+                    </TextField>
+                </FormControl>
 
                 <Typography
                     variant="h6"
