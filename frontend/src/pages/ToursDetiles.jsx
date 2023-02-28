@@ -1,13 +1,15 @@
 import { Typography } from "@mui/material";
 import { Box, Container } from "@mui/system";
-import React from "react";
+import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import TravlForm from "../components/TravlForm";
 
 function ToursDetiles() {
     const { state } = useLocation();
     const { tour } = state;
-
+    useEffect(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    }, []);
     return (
         <Box>
             <Box
