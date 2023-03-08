@@ -9,6 +9,7 @@ import Complaint from "./pages/Complaint";
 import Employment from "./pages/Employment";
 import ToursDetiles from "./pages/ToursDetiles";
 import Footer from "./components/Footer";
+import NotFound from "./pages/404";
 
 function App() {
     return (
@@ -23,7 +24,7 @@ function App() {
                 <Route path="/complaint" element={<Complaint />} />
                 <Route path="/employment" element={<Employment />} />
                 <Route path="/tours" element={<ToursDetiles />} />
-                {/* <Route path="*" element={<NotFound />} /> */}
+                <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />
         </div>
