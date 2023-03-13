@@ -20,8 +20,8 @@ const testimonis = [
 function TestimonialsList() {
     return (
         <Grid container spacing={3}>
-            {testimonis.map((testimon) => (
-                <Grid item xs={12} md={4}>
+            {testimonis.map((testimon, i) => (
+                <Grid item xs={12} md={4} key={i}>
                     <Testimonials testimon={testimon} />
                 </Grid>
             ))}

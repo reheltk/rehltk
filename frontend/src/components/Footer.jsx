@@ -3,8 +3,10 @@ import { Box, Typography } from "@mui/material";
 import { Stack } from "@mui/system";
 import React from "react";
 import { Link } from "react-router-dom";
+import { Facebook, Instagram, Twitter, WhatsApp } from "@mui/icons-material";
 
 function Footer() {
+    const year = new Date().getFullYear();
     return (
         <Box
             sx={{
@@ -52,7 +54,7 @@ function Footer() {
                     <Typography>حجز برامج سياحية</Typography>
                 </Link>
             </Stack>
-            {/* <Stack direction="row" gap={5}>
+            <Stack direction="row" gap={3}>
                 <Link
                     to="#"
                     style={{
@@ -65,7 +67,7 @@ function Footer() {
                     <Facebook />
                 </Link>
                 <Link
-                    to="#"
+                    to="https://www.instagram.com/reheltkksa/"
                     style={{
                         color: "inherit",
                         textDecoration: "none",
@@ -76,7 +78,18 @@ function Footer() {
                     <Instagram />
                 </Link>
                 <Link
-                    to="#"
+                    to="https://wa.me/+966510608385"
+                    style={{
+                        color: "inherit",
+                        textDecoration: "none",
+                        fontSize: 15,
+                        fontWeight: "bold",
+                    }}
+                >
+                    <WhatsApp />
+                </Link>
+                <Link
+                    to="https://twitter.com/reheltkksa"
                     style={{
                         color: "inherit",
                         textDecoration: "none",
@@ -86,8 +99,19 @@ function Footer() {
                 >
                     <Twitter />
                 </Link>
-            </Stack> */}
-            <Typography>جميع الحقوق محفوظة © رحلتك للسياحة 2023</Typography>
+                <Link
+                    to="tel:+966510608385"
+                    style={{
+                        color: "inherit",
+                        textDecoration: "none",
+                        fontSize: 15,
+                        fontWeight: "bold",
+                    }}
+                >
+                    +966510608385
+                </Link>
+            </Stack>
+            <Typography>جميع الحقوق محفوظة © رحلتك للسياحة {year}</Typography>
         </Box>
     );
 }
