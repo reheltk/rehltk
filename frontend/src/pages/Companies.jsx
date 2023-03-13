@@ -8,7 +8,7 @@ function Companies() {
         <Box>
             <Header1
                 title="القسم الخاص بالشركات  "
-                desc="تنظيم المعارض حجز الطيران والفنادق                "
+                desc="تنظيم المعارض حجز الطيران والفنادق"
             />
             <Container
                 sx={{

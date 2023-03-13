@@ -8,7 +8,7 @@ function Employment() {
         <Box>
             <Header1
                 title="توظيف"
-                desc="تقديم طلب عمل فى اقلاع للسفر والسياحة"
+                desc="تقديم طلب عمل فى رحلتك للسفر والسياحة"
             />
             <Container
                 sx={{
