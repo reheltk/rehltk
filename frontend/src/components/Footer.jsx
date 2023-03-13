@@ -95,7 +95,7 @@ function Footer() {
                         textDecoration: "none",
                         fontSize: 15,
                         fontWeight: "bold",
-                        height: "28px",
+                        height: "28px !import",
                     }}
                 >
                     <TikTok />
