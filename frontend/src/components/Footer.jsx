@@ -4,7 +4,7 @@ import { Stack } from "@mui/system";
 import React from "react";
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Twitter, WhatsApp } from "@mui/icons-material";
-
+import TikTok from "./Ui/TikTokIcon";
 function Footer() {
     const year = new Date().getFullYear();
     return (
@@ -87,6 +87,18 @@ function Footer() {
                     }}
                 >
                     <WhatsApp />
+                </Link>
+                <Link
+                    to="https://www.tiktok.com/@reheltkksa"
+                    style={{
+                        color: "inherit",
+                        textDecoration: "none",
+                        fontSize: 15,
+                        fontWeight: "bold",
+                        height: "28px",
+                    }}
+                >
+                    <TikTok />
                 </Link>
                 <Link
                     to="https://twitter.com/reheltkksa"
