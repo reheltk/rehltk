@@ -71,6 +71,7 @@ app.get("/tours", async (req, res) => {
         for (let row of rows) {
             tours.push({
                 title: row.title,
+                desc: row.desc,
                 imageUrl: row.imageUrl,
             });
         }

@@ -37,8 +37,9 @@ function ToursDetiles() {
                         typography: { xs: "h5", md: "h3" },
                     }}
                 >
-                    استمتع برحلة 10 أيام في {tour?.title} وزيارة جميع المعالم
-                    السياحية في {tour?.title} والأنشطة السياحية.
+                    {tour?.desc
+                        ? tour?.desc
+                        : `استمتع برحلة 10 أيام في ${tour?.title} وزيارة جميع المعالم السياحية في ${tour?.title} والأنشطة السياحية.`}
                 </Typography>
                 <Typography
                     variant="h3"
