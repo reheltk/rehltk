@@ -43,7 +43,7 @@ function CompaniesForm() {
                 email,
                 city,
                 desc,
-                date: Date.now(),
+                date: new Date().toLocaleString().split(",")[0],
             };
             const res = await axios.post("/addCoumpanyOrder", data);
             if (res.status === 200) setOk(true);

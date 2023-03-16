@@ -9,8 +9,10 @@ const {
     addComplaint,
     addEmployee,
     getToursList,
+    addSales,
 } = require("./utils/googleSheet");
-
+const connectDB = require("./utils/db");
+const adminController = require("./controllers/adminController");
 //=====================
 // MIDDLEWARE
 //=====================
@@ -28,9 +30,7 @@ app.post("/addOrder", async (req, res) => {
         res.json({
             ok: "ok",
         });
-    } catch (error) {
-        console.log(error);
-    }
+    } catch (error) {}
 });
 
 app.post("/addCoumpanyOrder", async (req, res) => {
@@ -39,9 +39,7 @@ app.post("/addCoumpanyOrder", async (req, res) => {
         res.json({
             ok: "ok",
         });
-    } catch (error) {
-        console.log(error);
-    }
+    } catch (error) {}
 });
 app.post("/addComplaint", async (req, res) => {
     try {
@@ -49,9 +47,7 @@ app.post("/addComplaint", async (req, res) => {
         res.json({
             ok: "ok",
         });
-    } catch (error) {
-        console.log(error);
-    }
+    } catch (error) {}
 });
 app.post("/addEmployee", async (req, res) => {
     try {
@@ -59,9 +55,15 @@ app.post("/addEmployee", async (req, res) => {
         res.json({
             ok: "ok",
         });
-    } catch (error) {
-        console.log(error);
-    }
+    } catch (error) {}
+});
+app.post("/addSales", async (req, res) => {
+    try {
+        await addSales(req.body);
+        res.json({
+            ok: "ok",
+        });
+    } catch (error) {}
 });
 
 app.get("/tours", async (req, res) => {
@@ -77,10 +79,11 @@ app.get("/tours", async (req, res) => {
         }
 
         res.json(tours);
-    } catch (error) {
-        console.log(error);
-    }
+    } catch (error) {}
 });
+
+app.post("/login", adminController.LogIn);
+app.post("/signUp", adminController.signUp);
 
 // 404 error
 app.use((req, res, next) => {
@@ -91,6 +94,7 @@ app.use((req, res, next) => {
     });
 });
 
+connectDB();
 app.listen(process.env.PORT, () =>
     console.log(` listening on port ${process.env.PORT}!`)
 );

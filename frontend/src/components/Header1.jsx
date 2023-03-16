@@ -3,7 +3,7 @@ import { Box, Typography, useTheme } from "@mui/material";
 
 function Header1({ title, desc }) {
     const theme = useTheme();
-    console.log(theme);
+
     return (
         <Box
             bgcolor={theme.palette.secondary.main}

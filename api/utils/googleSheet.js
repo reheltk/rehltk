@@ -82,3 +82,20 @@ exports.getToursList = async (data) => {
         return false;
     }
 };
+
+exports.addSales = async (data) => {
+    try {
+        const doc = new GoogleSpreadsheet(process.env.GOOGLE_SPREADSHEET_ID);
+
+        await doc.useServiceAccountAuth({
+            client_email: process.env.CLIENT_EMAIL,
+            private_key: process.env.PRIVATE_KEY,
+        });
+        await doc.loadInfo();
+        const sheet = doc.sheetsByTitle["sales"];
+        await sheet.addRow(data);
+        return true;
+    } catch (error) {
+        return false;
+    }
+};

@@ -45,7 +45,7 @@ function EmploymentForm() {
                 name,
                 age,
                 hasExpr,
-                date: Date.now(),
+                date: new Date().toLocaleString().split(",")[0],
             };
             const res = await axios.post("/addEmployee", data);
             if (res.status === 200) setOk(true);

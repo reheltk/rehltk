@@ -1,6 +1,7 @@
-import { Grid, Skeleton } from "@mui/material";
+import { Divider, Grid, Skeleton } from "@mui/material";
 import React from "react";
 import TorsCard from "./TorsCard";
+import ServiseCard from "./ServiseCard";
 import { useQuery } from "react-query";
 import axios from "../util/axios";
 
@@ -27,6 +28,29 @@ function ToursList() {
                             <TorsCard tour={tour} />
                         </Grid>
                     ))}
+            </Grid>
+            <Divider
+                primary="Inbox"
+                sx={{
+                    mt: 3,
+                    mb: 3,
+                }}
+            />
+            <Grid container spacing={2}>
+                <Grid item xs={12} md={4}>
+                    <ServiseCard
+                        to="/LssuingTouristVisas"
+                        title="تاشيرات سياحية"
+                        image="/images/lisinse.png"
+                    />
+                </Grid>
+                <Grid item xs={12} md={4}>
+                    <ServiseCard
+                        to="/InternationalLicense"
+                        title="رخصة القيادة دولية"
+                        image="/images/visa-passport.jpg"
+                    />
+                </Grid>
             </Grid>
         </>
     );

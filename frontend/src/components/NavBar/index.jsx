@@ -39,7 +39,7 @@ function NavBar() {
                                 style={{
                                     color: "inherit",
                                     textDecoration: "none",
-                                    fontSize: 15,
+                                    fontSize: 16,
                                     fontWeight: "bold",
                                 }}
                             >
@@ -50,7 +50,7 @@ function NavBar() {
                                 style={{
                                     color: "inherit",
                                     textDecoration: "none",
-                                    fontSize: 15,
+                                    fontSize: 16,
                                     fontWeight: "bold",
                                 }}
                             >
@@ -61,7 +61,7 @@ function NavBar() {
                                 style={{
                                     color: "inherit",
                                     textDecoration: "none",
-                                    fontSize: 15,
+                                    fontSize: 16,
                                     fontWeight: "bold",
                                 }}
                             >
@@ -72,7 +72,7 @@ function NavBar() {
                                 style={{
                                     color: "inherit",
                                     textDecoration: "none",
-                                    fontSize: 15,
+                                    fontSize: 16,
                                     fontWeight: "bold",
                                 }}
                             >
@@ -83,7 +83,7 @@ function NavBar() {
                                 style={{
                                     color: "inherit",
                                     textDecoration: "none",
-                                    fontSize: 15,
+                                    fontSize: 16,
                                     fontWeight: "bold",
                                 }}
                             >
@@ -94,7 +94,7 @@ function NavBar() {
                                 style={{
                                     color: "inherit",
                                     textDecoration: "none",
-                                    fontSize: 15,
+                                    fontSize: 16,
                                     fontWeight: "bold",
                                 }}
                             >

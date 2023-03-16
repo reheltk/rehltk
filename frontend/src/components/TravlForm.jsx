@@ -60,7 +60,7 @@ function TravlForm() {
                 city,
                 country,
                 bookingFlight,
-                date: Date.now(),
+                date: new Date().toLocaleString().split(",")[0],
             };
             const res = await axios.post("/addOrder", data);
             if (res.status === 200) setOk(true);

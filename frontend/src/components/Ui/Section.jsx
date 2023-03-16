@@ -3,7 +3,7 @@ import React from "react";
 
 function Section({ children, title }) {
     return (
-        <Container maxWidth="lg">
+        <Container maxWidth="xl">
             <Box
                 sx={{
                     marginTop: 10,
