@@ -18,7 +18,7 @@ export default function AddAdmin() {
     const [password, setPassword] = useState(null);
     const [role, setRole] = useState(null);
     const [ok, setOk] = useState(null);
-    const { user, login } = useAuth();
+    const { user } = useAuth();
 
     if (!user || user.role !== "admin") {
         return <Navigate to="/admin/AddSales" />;

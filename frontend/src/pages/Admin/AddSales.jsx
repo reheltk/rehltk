@@ -12,6 +12,7 @@ import {
 
 import axios from "../../util/axios";
 import FlotingSittingButton from "../../components/FlotingSittingButton";
+import { useAuth } from "../../conext/AurhContexe";
 const countrys = [
     "جورجيا ",
     "البوسنة ",
@@ -53,6 +54,7 @@ export default function AddSales() {
         useState(null);
     const [flightCost, setFlightCost] = useState(null);
     const [PackagePrice, setPackagePrice] = useState(null);
+    const { user } = useAuth();
 
     const [ok, setOk] = useState(null);
 
@@ -68,6 +70,7 @@ export default function AddSales() {
                 packageWithoutFlightCost,
                 flightCost,
                 PackagePrice,
+                employee: user.userName,
                 date: new Date().toLocaleString().split(",")[0],
             };
             const res = await axios.post("/addSales", data);
