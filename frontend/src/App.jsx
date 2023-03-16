@@ -10,6 +10,7 @@ import Employment from "./pages/Employment";
 import ToursDetiles from "./pages/ToursDetiles";
 import Footer from "./components/Footer";
 import NotFound from "./pages/404";
+import Inventory from "./pages/Inventory";
 
 function App() {
     return (
