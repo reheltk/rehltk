@@ -27,6 +27,7 @@ function Login() {
             e.target.reset();
         } catch (error) {
             setOk(false);
+            console.log(error);
         }
     };
     if (user) {
