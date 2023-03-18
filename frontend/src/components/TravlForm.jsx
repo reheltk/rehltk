@@ -61,6 +61,7 @@ function TravlForm() {
                 country,
                 bookingFlight,
                 date: new Date().toLocaleString().split(",")[0],
+                time: new Date().toLocaleTimeString(),
             };
             const res = await axios.post("/addOrder", data);
             if (res.status === 200) setOk(true);

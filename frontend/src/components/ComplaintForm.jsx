@@ -22,8 +22,8 @@ function ComplaintForm() {
                 phone,
                 name,
                 desc,
-
                 date: new Date().toLocaleString().split(",")[0],
+                time: new Date().toLocaleTimeString(),
             };
             const res = await axios.post("/addComplaint", data);
             if (res.status === 200) setOk(true);
