@@ -25,8 +25,17 @@ app.use(cors());
 //=====================
 
 app.post("/addOrder", async (req, res) => {
+    const data = {
+        "رقم الجوال": req.body.phone,
+        المدينة: req.body.city,
+        الدولة: req.body.country,
+        "حاجز طيران": req.body.bookingFlight,
+        التاريخ: req.body.date,
+        الوقت: req.body.time,
+    };
+
     try {
-        await addOrder(req.body);
+        await addOrder(data);
         res.json({
             ok: "ok",
         });
@@ -34,32 +43,75 @@ app.post("/addOrder", async (req, res) => {
 });
 
 app.post("/addCoumpanyOrder", async (req, res) => {
+    const data = {
+        "رقم الجوال": req.body.phone,
+        "اسم العميل": req.body.personName,
+        "اسم الشركة": req.body.coumpanyName,
+        "البريد الالكتروني": req.body.email,
+        المدينة: req.body.city,
+        الوصف: req.body.desc,
+        التاريخ: req.body.date,
+        الوقت: req.body.time,
+    };
     try {
-        await addCoumpanyOrder(req.body);
+        await addCoumpanyOrder(data);
         res.json({
             ok: "ok",
         });
     } catch (error) {}
 });
 app.post("/addComplaint", async (req, res) => {
+    const data = {
+        "رقم الجوال": req.body.phone,
+        "اسم العميل": req.body.name,
+        الوصف: req.body.desc,
+        التاريخ: req.body.date,
+        الوقت: req.body.time,
+    };
     try {
-        await addComplaint(req.body);
+        await addComplaint(data);
         res.json({
             ok: "ok",
         });
     } catch (error) {}
 });
 app.post("/addEmployee", async (req, res) => {
+    const data = {
+        "رقم الجوال": req.body.phone,
+        "اسم العميل": req.body.name,
+        العمر: req.body.age,
+        المدينة: req.body.city,
+        "لدية خبرة": req.body.hasExpr,
+        التاريخ: req.body.date,
+        الوقت: req.body.time,
+    };
+
     try {
-        await addEmployee(req.body);
+        await addEmployee(data);
         res.json({
             ok: "ok",
         });
     } catch (error) {}
 });
 app.post("/addSales", async (req, res) => {
+    const data = {
+        "اسم العميل": req.body.name,
+        "رقم الجوال": req.body.phone,
+        الدولة: req.body.country,
+
+        "سعر الباكدج بدون تكلفة الطيران": req.body.packageWithoutFlightCost,
+        "تكلفة الطيران": req.body.flightCost,
+        "سعر الباكدج": req.body.PackagePrice,
+
+        المدينة: req.body.city,
+
+        التاريخ: req.body.date,
+        الوقت: req.body.time,
+        الموظف: req.body.employee,
+    };
+
     try {
-        await addSales(req.body);
+        await addSales(data);
         res.json({
             ok: "ok",
         });

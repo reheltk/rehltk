@@ -72,6 +72,7 @@ export default function AddSales() {
                 PackagePrice,
                 employee: user.userName,
                 date: new Date().toLocaleString().split(",")[0],
+                time: new Date().toLocaleTimeString(),
             };
             const res = await axios.post("/addSales", data);
             if (res.status === 200) setOk(true);
