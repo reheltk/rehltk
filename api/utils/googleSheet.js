@@ -85,7 +85,9 @@ exports.getToursList = async (data) => {
 
 exports.addSales = async (data) => {
     try {
-        const doc = new GoogleSpreadsheet(process.env.GOOGLE_SPREADSHEET_ID);
+        const doc = new GoogleSpreadsheet(
+            "1KijO5AaYQlIQwLMz87BEA-B9MhQh5pSYY2_i3asGvuk"
+        );
 
         await doc.useServiceAccountAuth({
             client_email: process.env.CLIENT_EMAIL,

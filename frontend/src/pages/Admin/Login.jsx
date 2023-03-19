@@ -19,6 +19,7 @@ function Login() {
                 password,
             };
             const res = await axios.post("/login", data);
+            console.log(res);
             if (res.status === 200) {
                 setOk(true);
                 login(res.data);

@@ -98,13 +98,10 @@ app.post("/addSales", async (req, res) => {
         "اسم العميل": req.body.name,
         "رقم الجوال": req.body.phone,
         الدولة: req.body.country,
-
         "سعر الباكدج بدون تكلفة الطيران": req.body.packageWithoutFlightCost,
         "تكلفة الطيران": req.body.flightCost,
         "سعر الباكدج": req.body.PackagePrice,
-
         المدينة: req.body.city,
-
         التاريخ: req.body.date,
         الوقت: req.body.time,
         الموظف: req.body.employee,
