@@ -33,6 +33,7 @@ function Login() {
     if (user) {
         return <Navigate to="/admin/AddSales" />;
     }
+    console.log(user);
     return (
         <Box maxWidth={500} margin={"50px auto"}>
             <Typography

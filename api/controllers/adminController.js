@@ -37,13 +37,10 @@ exports.LogIn = async (req, res) => {
 
         const token = creatAdminJWT({ id: admin._id, role: admin.role });
         const { password, ...user } = admin._doc;
-        return res
-            .status(200)
-            .header("token", token)
-            .json({
-                token,
-                ...user,
-            });
+        return res.status(200).json({
+            token,
+            ...user,
+        });
     } catch (error) {
         res.status(400).json({
             error,
