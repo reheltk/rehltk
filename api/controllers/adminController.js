@@ -1,5 +1,4 @@
 const Admin = require("../models/admin");
-const jwt = require("jsonwebtoken");
 const { creatAdminJWT } = require("../utils/jwt");
 exports.signUp = async (req, res) => {
     try {
