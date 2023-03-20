@@ -8,6 +8,7 @@ import {
     Alert,
 } from "@mui/material";
 import axios from "../util/axios";
+import getCurrentData from "../util/getCurrentData";
 function ComplaintForm() {
     const [name, setName] = useState(null);
     const [phone, setPhone] = useState(null);
@@ -22,7 +23,7 @@ function ComplaintForm() {
                 phone,
                 name,
                 desc,
-                date: new Date().toLocaleString().split(",")[0],
+                date: getCurrentData(),
                 time: new Date().toLocaleTimeString(),
             };
             const res = await axios.post("/addComplaint", data);

@@ -13,6 +13,7 @@ import {
 import axios from "../../util/axios";
 import FlotingSittingButton from "../../components/FlotingSittingButton";
 import { useAuth } from "../../conext/AurhContexe";
+import getCurrentData from "../../util/getCurrentData";
 const countrys = [
     "جورجيا ",
     "البوسنة ",
@@ -73,7 +74,7 @@ export default function AddSales() {
                 PackagePrice,
                 employee: user.userName,
                 agent,
-                date: new Date().toLocaleString().split(",")[0],
+                date: getCurrentData(),
                 time: new Date().toLocaleTimeString(),
             };
             const res = await axios.post("/addSales", data);

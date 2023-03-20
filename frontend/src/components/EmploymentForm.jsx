@@ -13,6 +13,7 @@ import {
     Alert,
 } from "@mui/material";
 import axios from "../util/axios";
+import getCurrentData from "../util/getCurrentData";
 
 const citys = [
     "الرياض",
@@ -45,7 +46,7 @@ function EmploymentForm() {
                 name,
                 age,
                 hasExpr,
-                date: new Date().toLocaleString().split(",")[0],
+                date: getCurrentData(),
                 time: new Date().toLocaleTimeString(),
             };
             const res = await axios.post("/addEmployee", data);

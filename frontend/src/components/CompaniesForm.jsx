@@ -9,6 +9,7 @@ import {
     FormControl,
 } from "@mui/material";
 import axios from "../util/axios";
+import getCurrentData from "../util/getCurrentData";
 
 const citys = [
     "الرياض",
@@ -43,7 +44,7 @@ function CompaniesForm() {
                 email,
                 city,
                 desc,
-                date: new Date().toLocaleString().split(",")[0],
+                date: getCurrentData(),
                 time: new Date().toLocaleTimeString(),
             };
             const res = await axios.post("/addCoumpanyOrder", data);

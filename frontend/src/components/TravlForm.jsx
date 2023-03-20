@@ -14,6 +14,7 @@ import {
 } from "@mui/material";
 
 import axios from "../util/axios";
+import getCurrentData from "../util/getCurrentData";
 const countrys = [
     "جورجيا ",
     "البوسنة ",
@@ -60,9 +61,10 @@ function TravlForm() {
                 city,
                 country,
                 bookingFlight,
-                date: new Date().toLocaleString().split(",")[0],
+                date: getCurrentData(),
                 time: new Date().toLocaleTimeString(),
             };
+
             const res = await axios.post("/addOrder", data);
             if (res.status === 200) setOk(true);
             e.target.reset();
