@@ -41,14 +41,14 @@ function ToursList() {
                     <ServiseCard
                         to="/LssuingTouristVisas"
                         title="تاشيرات سياحية"
-                        image="/images/lisinse.png"
+                        image="/images/visa-passport.jpg"
                     />
                 </Grid>
                 <Grid item xs={12} md={4}>
                     <ServiseCard
                         to="/InternationalLicense"
                         title="رخصة القيادة دولية"
-                        image="/images/visa-passport.jpg"
+                        image="/images/lisinse.png"
                     />
                 </Grid>
                 <Grid item xs={12} md={4}>
