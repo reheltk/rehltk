@@ -51,6 +51,13 @@ function ToursList() {
                         image="/images/visa-passport.jpg"
                     />
                 </Grid>
+                <Grid item xs={12} md={4}>
+                    <ServiseCard
+                        to="/BookingFlight"
+                        title="حجز طيران - فنادق"
+                        image="/images/Booking-Flights-through-Travel-Agents.jpg"
+                    />
+                </Grid>
             </Grid>
         </>
     );

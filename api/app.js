@@ -105,6 +105,7 @@ app.post("/addSales", async (req, res) => {
         التاريخ: req.body.date,
         الوقت: req.body.time,
         الموظف: req.body.employee,
+        "اسم الوكيل": req.body.agent,
     };
 
     try {

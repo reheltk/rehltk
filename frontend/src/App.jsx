@@ -17,6 +17,7 @@ import ProtectedRoute from "./util/ProtectedRoute";
 import { AuthLayout } from "./conext/AurhContexe";
 import LssuingTouristVisas from "./pages/OtherServise/LssuingTouristVisas";
 import InternationalLicense from "./pages/OtherServise/InternationalLicense";
+import BookingFlight from "./pages/OtherServise/BookingFlight";
 
 function App() {
     return (
@@ -41,6 +42,7 @@ function App() {
                     path="/InternationalLicense"
                     element={<InternationalLicense />}
                 />
+                <Route path="/BookingFlight" element={<BookingFlight />} />
                 <Route element={<AuthLayout />}>
                     <Route path="/admin/login" element={<Login />} />
                     <Route

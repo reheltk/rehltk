@@ -49,6 +49,7 @@ export default function AddSales() {
 
     const [city, setCity] = useState(null);
     const [country, setCountry] = useState(null);
+    const [agent, setAgent] = useState(null);
 
     const [packageWithoutFlightCost, setPackageWithoutFlightCost] =
         useState(null);
@@ -71,6 +72,7 @@ export default function AddSales() {
                 flightCost,
                 PackagePrice,
                 employee: user.userName,
+                agent,
                 date: new Date().toLocaleString().split(",")[0],
                 time: new Date().toLocaleTimeString(),
             };
@@ -143,6 +145,28 @@ export default function AddSales() {
                             fullWidth
                             name="phone"
                             onChange={(e) => setPhone(e.target.value)}
+                            required
+                            sx={{
+                                mb: 1,
+                                backgroundColor: "#EEEEEE",
+                            }}
+                        />
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                        <Typography
+                            variant="h6"
+                            component="h3"
+                            sx={{
+                                mb: 1,
+                                maxWidth: 600,
+                            }}
+                        >
+                            اسم الوكيل:
+                        </Typography>
+                        <TextField
+                            fullWidth
+                            name="name"
+                            onChange={(e) => setAgent(e.target.value)}
                             required
                             sx={{
                                 mb: 1,
